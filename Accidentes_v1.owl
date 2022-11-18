@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vgame/ontologies/2022/10/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/vgame/ontologies/2022/10/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#cuidados -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#cuidados">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Nocividad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#enDistrito -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#enDistrito">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Distrito"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#individuoImplicado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#individuoImplicado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#lugarAccidente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#lugarAccidente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tieneEdad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tieneEdad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#RangoEdad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tieneVehiculo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tieneVehiculo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Conductor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#accidenteId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#accidenteId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#alcohol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#alcohol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#clima -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#clima">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#codigoDistrito -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#codigoDistrito">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Distrito"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#codigoNocividad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#codigoNocividad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Nocividad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#latitud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#latitud">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#limiteInferior -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#limiteInferior">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#RangoEdad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#limiteSuperior -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#limiteSuperior">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#RangoEdad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#longitud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#longitud">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#nombreDistrito -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#nombreDistrito">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Distrito"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#nombreLocalizacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#nombreLocalizacion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tipoNocividad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#tipoNocividad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Nocividad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#vaEnVehiculo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#vaEnVehiculo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Pasajero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Accidente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus_Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus_Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus_EMT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus_EMT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autobus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autocaravana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Autocaravana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Bicicleta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Bicicleta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Bicicleta_EPAC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Bicicleta_EPAC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Bicicleta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion_Rigido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion_Rigido">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Ciclo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Ciclo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Ciclomotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Ciclomotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Conductor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Conductor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Cuadriciclo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Cuadriciclo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Distrito -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Distrito"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Hombre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Hombre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Localizacion">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Maquinaria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Maquinaria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Moto_tres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Moto_tres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta_lenta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta_lenta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta_rapida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta_rapida">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Motocicleta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Mujer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Mujer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Nocividad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Nocividad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Pasajero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Pasajero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Patinete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Patinete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Peaton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Peaton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Individuo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#RangoEdad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#RangoEdad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Todo_terreno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Todo_terreno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Tractocamion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Tractocamion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Camion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Turismo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Turismo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#VMU_Electrico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#VMU_Electrico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo_Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo_Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vgame/ontologies/2022/10/Accidentes_v1#Vehiculo"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
